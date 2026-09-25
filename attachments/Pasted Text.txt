@@ -1,0 +1,147 @@
+
+
+
+Build a fully responsive mobile experience for the existing “AI Source Code Splitter Studio” application.
+
+Do not redesign or remove the existing desktop experience. Preserve the current visual language, functionality, component structure, and dark developer-tool aesthetic. Only extend the existing implementation to support mobile devices.
+
+Mobile responsive requirements:
+
+1. Responsive Layout
+
+* Support mobile screen widths from 320px and above.
+* Support tablets and desktop screens.
+* Replace the desktop multi-panel layout with a mobile-friendly single-panel layout.
+* Do not display the left, center, right, and bottom panels simultaneously on small screens.
+* Use a tab-based or segmented navigation system for mobile sections:
+    * Source
+    * Structure
+    * Preview
+    * Analysis
+* Keep the desktop resizable-panel layout unchanged on medium and large screens.
+
+2. Mobile Navigation
+
+* Add a compact mobile header.
+* Include the application logo or title.
+* Add a menu button for global actions.
+* Add a theme toggle if one already exists.
+* Add a mobile tab bar or segmented control for switching between:
+    * Original source/upload
+    * Generated file structure
+    * Code preview
+    * Analysis results
+* Clearly indicate the active section.
+* Make the tab bar horizontally scrollable if necessary.
+* Keep navigation accessible with proper labels and keyboard support.
+
+3. Source Upload Mobile Experience
+
+* Make the upload area fit narrow screens.
+* Support drag and drop where available.
+* Provide a clear “Choose file” button for touch devices.
+* Support pasting code into a mobile-friendly editor.
+* Display file name, file size, and line count without overflow.
+* Stack upload controls vertically on small screens.
+* Ensure all buttons have a minimum touch target of 44px.
+
+4. Split Controls
+
+* Convert the split controls into a mobile-friendly accordion, drawer, or bottom sheet.
+* Keep Minimal, Balanced, and Maximum split modes easy to select.
+* Place advanced controls inside a collapsible “Advanced settings” section.
+* Use full-width controls on mobile.
+* Ensure switches, checkboxes, sliders, and inputs are easy to use with touch.
+* Prevent horizontal scrolling.
+
+5. File Structure Preview
+
+* Display the generated file tree as a full-width mobile view.
+* Support expanding and collapsing folders.
+* Make file rows easy to tap.
+* Add a clear action for selecting a file and opening it in the Preview tab.
+* Move rename and move actions into a contextual menu or bottom sheet.
+* Prevent long file names from breaking the layout; truncate them with tooltips or expandable text.
+
+6. Code Preview
+
+* Make the Monaco Editor responsive on mobile.
+* Use a minimum readable font size.
+* Allow horizontal code scrolling inside the editor only.
+* Do not cause the entire page to overflow horizontally.
+* Move editor actions such as copy, download, format, search, and theme into:
+    * A compact toolbar
+    * An overflow menu
+    * Or a sticky bottom action bar
+* Keep the selected file name visible.
+* Make the diff viewer usable on small screens, preferably with a single-column or horizontally scrollable layout.
+
+7. Export Actions
+
+* Make Copy, Download, Download ZIP, Download Selected Files, and Copy Entire Project actions accessible on mobile.
+* Use a sticky bottom action bar or mobile action menu.
+* Stack buttons vertically when necessary.
+* Show toast feedback after copy or download actions.
+* Ensure destructive or potentially expensive actions have clear confirmation where appropriate.
+
+8. Analysis Dashboard
+
+* Convert dashboard cards into a responsive grid.
+* Use one column on very small screens, two columns on larger mobile and tablet screens.
+* Keep metrics readable and avoid cramped cards.
+* Stack warnings and suggestions vertically.
+* Make charts or dependency visualizations horizontally scrollable within their own container.
+* Do not allow charts to overflow the page.
+
+9. AI Refactoring
+
+* Present AI refactoring actions in a mobile-friendly list or bottom sheet.
+* Use full-width action buttons.
+* Show loading, success, and error states clearly.
+* Keep suggestions readable and collapsible.
+
+10. Responsive Design Rules
+
+* Use mobile-first CSS.
+* Use responsive Tailwind breakpoints.
+* Avoid fixed widths that exceed the viewport.
+* Use min-width: 0 where needed for flex and grid children.
+* Ensure long code, file names, paths, and error messages wrap or scroll correctly.
+* Preserve spacing and visual hierarchy across screen sizes.
+* Respect safe-area insets on mobile devices.
+* Support both portrait and landscape orientations.
+* Ensure dialogs, dropdowns, popovers, and sheets fit within the viewport.
+* Prevent background scrolling when a mobile drawer or modal is open.
+
+11. Accessibility
+
+* Maintain keyboard navigation on desktop.
+* Support touch interaction on mobile.
+* Add accessible labels to icon-only buttons.
+* Ensure visible focus states.
+* Maintain sufficient color contrast.
+* Use semantic buttons, tabs, dialogs, and navigation elements.
+* Announce important copy, download, parsing, and formatting results with accessible toast or status messages.
+
+12. Responsive Testing
+
+Test the implementation at these viewport sizes:
+
+* 320px × 568px
+* 375px × 667px
+* 390px × 844px
+* 414px × 896px
+* 768px × 1024px
+* 1024px × 768px
+* 1280px and above
+
+13. Implementation Requirements
+
+* Reuse existing components whenever possible.
+* Do not duplicate business logic for mobile and desktop.
+* Create responsive wrappers, mobile navigation, drawers, sheets, or tabs only where necessary.
+* Preserve existing state management and functionality.
+* Keep the current desktop layout unchanged unless a small shared responsive adjustment is required.
+* Ensure the application remains production-quality and visually consistent.
+* Verify that no horizontal page overflow occurs on mobile.
+* Return only the modified and newly created files.

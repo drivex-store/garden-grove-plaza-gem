@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Splitter Studio",
+      "hasCanvas": false,
+      "bodyTextLen": 2327,
+      "bodyTextHash": "9fcd60387a010e599dce903ca9dcdc679c0ed9c8c78361149f309249d653d92e",
+      "bodyTextPrefix": "Splitter Studio AI Source Code Splitter TypeScript 26 files 627 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Splitter Studio",
+      "hasCanvas": false,
+      "bodyTextLen": 400,
+      "bodyTextHash": "932562ed386bd78c8d17fb8e9657b43dc57eaf36d8cf3b153bb5e1415ca70172",
+      "bodyTextPrefix": "Splitter Studio forge-queue.ts · 26 files Source Structure Previ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
